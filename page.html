@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tournament Registration</title>
+<style>
+    /* Animated Gradient Background */
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        background: linear-gradient(-45deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    header {
+        text-align: center;
+        padding: 2rem 1rem;
+        background: rgba(0,0,0,0.4);
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(5px);
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        animation: fadeInDown 1s ease;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        background: rgba(0,0,0,0.3);
+        margin: 0;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.8rem 1rem;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: rgba(255,255,255,0.2);
+        border-radius: 8px;
+        transform: scale(1.1);
+    }
+
+    section {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+        background: rgba(0,0,0,0.35);
+        border-radius: 15px;
+        margin-top: 2rem;
+        backdrop-filter: blur(5px);
+        animation: fadeInUp 1s ease;
+    }
+
+    h2 {
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 0.8rem;
+        font-weight: bold;
+    }
+
+    input, textarea, button {
+        padding: 0.7rem;
+        margin-top: 0.3rem;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        font-size: 1rem;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        margin-top: 1rem;
+        background: #ff9f43;
+        color: #000;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #feca57;
+        transform: scale(1.05);
+    }
+
+    footer {
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        background: rgba(0,0,0,0.4);
+        border-top: 2px solid rgba(255,255,255,0.2);
+    }
+
+    /* Fade animations */
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the Tournament!</h1>
+    <p>Join us for an exciting competition!</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="#prizes">Prizes</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="registration">
+    <h2>Register Your Team</h2>
+    <form action="thankyou.html" method="get">
+        <input type="text" name="team_name" placeholder="Team Name" required>
+        <input type="text" name="team_members" placeholder="@player1, @player2, @player3" required>
+        <input type="number" name="team_size" placeholder="Team Size" required>
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<section id="prizes">
+    <h2>Prize Distribution</h2>
+    <p>1st Place: ₹800</p>
+    <p>2nd Place: ₹400</p>
+    <p>3rd Place: ₹200</p>
+    <p>Participation Prize: ₹25 for each remaining team</p>
+</section>
+
+<section id="rules">
+    <h2>Tournament Rules</h2>
+    <p>All teams must adhere to the tournament rules and code of conduct.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="submit_contact.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 Tournament Organizer. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
